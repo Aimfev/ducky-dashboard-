@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ducky Bot Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<div class="app">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+            🦆
+            <span>Ducky</span>
+        </div>
+
+        <div class="server-box">
+            <div class="server-icon">D</div>
+
+            <div>
+                <strong>Ducky SMP</strong>
+                <small>Server Dashboard</small>
+            </div>
+
+            <span>⌄</span>
+        </div>
+
+        <nav>
+
+            <p class="nav-title">MAIN</p>
+
+            <a href="#" class="nav-item active">
+                🏠
+                <span>Dashboard</span>
+            </a>
+
+            <a href="#moderation" class="nav-item">
+                🛡️
+                <span>Moderation</span>
+            </a>
+
+            <a href="#automod" class="nav-item">
+                🤖
+                <span>AutoMod</span>
+            </a>
+
+            <p class="nav-title">COMMUNITY</p>
+
+            <a href="#welcome" class="nav-item">
+                👋
+                <span>Welcome</span>
+            </a>
+
+            <a href="#leveling" class="nav-item">
+                ⭐
+                <span>Leveling</span>
+            </a>
+
+            <a href="#tickets" class="nav-item">
+                🎫
+                <span>Tickets</span>
+            </a>
+
+            <a href="#giveaways" class="nav-item">
+                🎁
+                <span>Giveaways</span>
+            </a>
+
+            <a href="#roles" class="nav-item">
+                🎭
+                <span>Roles</span>
+            </a>
+
+            <p class="nav-title">SERVER</p>
+
+            <a href="#announcements" class="nav-item">
+                📢
+                <span>Announcements</span>
+            </a>
+
+            <a href="#statistics" class="nav-item">
+                📊
+                <span>Statistics</span>
+            </a>
+
+            <a href="#settings" class="nav-item">
+                ⚙️
+                <span>Settings</span>
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <div class="bot-status">
+                <span class="status-dot"></span>
+
+                <div>
+                    <strong>Ducky Bot</strong>
+                    <small>Online</small>
+                </div>
+            </div>
+
+            <a href="index.html" class="logout">
+                🚪 Logout
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+    <main class="content">
+
+        <header class="topbar">
+
+            <div>
+                <h1>Dashboard</h1>
+
+                <p>
+                    Welcome back! Manage your Discord server.
+                </p>
+            </div>
+
+            <div class="profile">
+
+                <div class="profile-avatar">
+                    D
+                </div>
+
+                <div>
+                    <strong>Discord User</strong>
+                    <small>Administrator</small>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- OVERVIEW -->
+
+        <section class="dashboard-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <h2>Server Overview</h2>
+
+                    <p>
+                        Here's what's happening in your server.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">👥</div>
+
+                    <div>
+                        <span>Total Members</span>
+                        <strong id="memberCount">0</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">🟢</div>
+
+                    <div>
+                        <span>Online Members</span>
+                        <strong id="onlineCount">0</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">💬</div>
+
+                    <div>
+                        <span>Messages</span>
+                        <strong id="messageCount">0</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">⏱️</div>
+
+                    <div>
+                        <span>Bot Uptime</span>
+                        <strong id="botUptime">0h</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- QUICK ACTIONS -->
+
+        <section class="dashboard-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <h2>Quick Actions</h2>
+
+                    <p>
+                        Quickly access common server controls.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="quick-grid">
+
+                <button class="action-card">
+
+                    <span>🛡️</span>
+
+                    <div>
+                        <strong>Moderation</strong>
+                        <small>Manage members</small>
+                    </div>
+
+                </button>
+
+
+                <button class="action-card">
+
+                    <span>📢</span>
+
+                    <div>
+                        <strong>Announcement</strong>
+                        <small>Send an announcement</small>
+                    </div>
+
+                </button>
+
+
+                <button class="action-card">
+
+                    <span>🎁</span>
+
+                    <div>
+                        <strong>Giveaway</strong>
+                        <small>Create a giveaway</small>
+                    </div>
+
+                </button>
+
+
+                <button class="action-card">
+
+                    <span>🎫</span>
+
+                    <div>
+                        <strong>Tickets</strong>
+                        <small>Manage support</small>
+                    </div>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- MODERATION -->
+
+        <section id="moderation" class="dashboard-section">
+
+            <div class="glass-panel">
+
+                <h2>🛡️ Moderation</h2>
+
+                <p>
+                    Manage moderation settings and actions.
+                </p>
+
+                <div class="settings-grid">
+
+                    <label>
+                        Ban Members
+
+                        <input type="checkbox" checked>
+                    </label>
+
+                    <label>
+                        Kick Members
+
+                        <input type="checkbox" checked>
+                    </label>
+
+                    <label>
+                        Timeout Members
+
+                        <input type="checkbox" checked>
+                    </label>
+
+                    <label>
+                        Warning System
+
+                        <input type="checkbox" checked>
+                    </label>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- AUTOMOD -->
+
+        <section id="automod" class="dashboard-section">
+
+            <div class="glass-panel">
+
+                <h2>🤖 AutoMod</h2>
+
+                <p>
+                    Automatically protect your server.
+                </p>
+
+                <div class="settings-grid">
+
+                    <label>
+                        Anti-Spam
+
+                        <input type="checkbox" checked>
+                    </label>
+
+                    <label>
+                        Anti-Link
+
+                        <input type="checkbox">
+                    </label>
+
+                    <label>
+                        Word Filter
+
+                        <input type="checkbox">
+                    </label>
+
+                    <label>
+                        Mention Protection
+
+                        <input type="checkbox" checked>
+                    </label>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- WELCOME -->
+
+        <section id="welcome" class="dashboard-section">
+
+            <div class="glass-panel">
+
+                <h2>👋 Welcome System</h2>
+
+                <p>
+                    Configure messages for new members.
+                </p>
+
+                <textarea
+                    placeholder="Welcome {user} to Ducky SMP! 🦆"
+                ></textarea>
+
+                <button class="save-btn">
+                    Save Welcome Message
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- LEVELING -->
+
+        <section id="leveling" class="dashboard-section">
+
+            <div class="glass-panel">
+
+                <h2>⭐ Leveling</h2>
+
+                <p>
+                    Configure XP and member rewards.
+                </p>
+
+                <div class="input-row">
+
+                    <input
+                        type="number"
+                        placeholder="XP per message"
+                        value="10"
+                    >
+
+                    <input
+                        type="number"
+                        placeholder="Cooldown"
+                        value="60"
+                    >
+
+                </div>
+
+                <button class="save-btn">
+                    Save Leveling Settings
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- TICKETS -->
+
+        <section id="tickets" class="dashboard-section">
+
+            <div class="glass-panel">
+
+                <h2>🎫 Tickets</h2>
+
+                <p>
+                    Configure your support ticket system.
+                </p>
+
+                <button class="save-btn">
+                    Create Ticket Panel
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- GIVEAWAYS -->
+
+        <section id="giveaways" class="dashboard-section">
+
+            <div class="glass-panel">
+
+                <h2>🎁 Giveaways</h2>
+
+                <p>
+                    Create and manage giveaways.
+                </p>
+
+                <div class="input-row">
+
+                    <input
+                        type="text"
+                        placeholder="Prize"
+                    >
+
+                    <input
+                        type="number"
+                        placeholder="Duration in minutes"
+                    >
+
+                </div>
+
+                <button class="save-btn">
+                    Create Giveaway
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ROLES -->
+
+        <section id="roles" class="dashboard-section">
+
+            <div class="glass-panel">
+
+                <h2>🎭 Roles</h2>
+
+                <p>
+                    Manage autoroles and role systems.
+                </p>
+
+                <button class="save-btn">
+                    Configure Roles
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ANNOUNCEMENTS -->
+
+        <section id="announcements" class="dashboard-section">
+
+            <div class="glass-panel">
+
+                <h2>📢 Announcements</h2>
+
+                <p>
+                    Send announcements to your Discord server.
+                </p>
+
+                <textarea
+                    placeholder="Write your announcement..."
+                ></textarea>
+
+                <button class="save-btn">
+                    Send Announcement
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- STATISTICS -->
+
+        <section id="statistics" class="dashboard-section">
+
+            <div class="glass-panel">
+
+                <h2>📊 Statistics</h2>
+
+                <p>
+                    Server activity and bot statistics.
+                </p>
+
+                <div class="stats-list">
+
+                    <div>
+                        <span>Members</span>
+                        <strong>0</strong>
+                    </div>
+
+                    <div>
+                        <span>Channels</span>
+                        <strong>0</strong>
+                    </div>
+
+                    <div>
+                        <span>Roles</span>
+                        <strong>0</strong>
+                    </div>
+
+                    <div>
+                        <span>Bot Status</span>
+                        <strong class="online-text">Online</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SETTINGS -->
+
+        <section id="settings" class="dashboard-section">
+
+            <div class="glass-panel">
+
+                <h2>⚙️ Server Settings</h2>
+
+                <p>
+                    Configure Ducky Bot for your server.
+                </p>
+
+                <div class="settings-grid">
+
+                    <label>
+                        Enable Ducky Bot
+
+                        <input type="checkbox" checked>
+                    </label>
+
+                    <label>
+                        Enable Logging
+
+                        <input type="checkbox" checked>
+                    </label>
+
+                    <label>
+                        Enable Commands
+
+                        <input type="checkbox" checked>
+                    </label>
+
+                    <label>
+                        Enable Notifications
+
+                        <input type="checkbox" checked>
+                    </label>
+
+                </div>
+
+                <button class="save-btn">
+                    Save Settings
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <footer class="dashboard-footer">
+
+            <p>
+                Ducky Bot Dashboard • 2026 🦆
+            </p>
+
+        </footer>
+
+    </main>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+                                          </html>
