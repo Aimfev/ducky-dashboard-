@@ -11,12 +11,6 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-/*
-========================================
-DISCORD BOT
-========================================
-*/
-
 const client = new Client({
     intents: [
         GatewayIntentBits.Guilds,
@@ -26,20 +20,8 @@ const client = new Client({
     ]
 });
 
-/*
-========================================
-MIDDLEWARE
-========================================
-*/
-
 app.use(cors());
 app.use(express.json());
-
-/*
-========================================
-BOT EVENTS
-========================================
-*/
 
 client.once("ready", () => {
     console.log("--------------------------------");
@@ -50,12 +32,6 @@ client.once("ready", () => {
     console.log("--------------------------------");
 });
 
-/*
-========================================
-BOT ERROR EVENTS
-========================================
-*/
-
 client.on("error", (error) => {
     console.error("❌ Discord client error:");
     console.error(error);
@@ -65,12 +41,6 @@ client.on("warn", (warning) => {
     console.warn("⚠️ Discord warning:");
     console.warn(warning);
 });
-
-/*
-========================================
-API
-========================================
-*/
 
 app.get("/", (req, res) => {
     res.json({
@@ -107,12 +77,6 @@ app.get("/api/stats", (req, res) => {
     });
 });
 
-/*
-========================================
-ERROR HANDLER
-========================================
-*/
-
 app.use((err, req, res, next) => {
     console.error("❌ Server error:");
     console.error(err);
@@ -123,12 +87,6 @@ app.use((err, req, res, next) => {
     });
 });
 
-/*
-========================================
-START WEB SERVER
-========================================
-*/
-
 app.listen(PORT, "0.0.0.0", () => {
     console.log("--------------------------------");
     console.log("🦆 Ducky Bot Backend");
@@ -137,21 +95,12 @@ app.listen(PORT, "0.0.0.0", () => {
     console.log("--------------------------------");
 });
 
-/*
-========================================
-LOGIN TO DISCORD
-========================================
-*/
-
 console.log("🔍 Checking Discord token...");
 
 if (!process.env.DISCORD_TOKEN) {
-
     console.error("❌ DISCORD_TOKEN is missing!");
     console.error("Go to Render → Environment and add DISCORD_TOKEN.");
-
 } else {
-
     console.log("🔑 Discord token found!");
     console.log("🔌 Connecting to Discord...");
 
@@ -164,24 +113,3 @@ if (!process.env.DISCORD_TOKEN) {
             console.error(error);
         });
 }
-
-After you replace it
-
-1. Tap Commit changes on GitHub.
-2. Go back to Render.
-3. Wait for the new deployment to finish.
-4. Open Logs.
-
-You should now see either:
-
-"🔑 Discord token found!"
-
-followed by:
-
-"🔌 Connecting to Discord..."
-
-or:
-
-"❌ DISCORD_TOKEN is missing!"
-
-Don't send me your token. Just tell me which message appears. 🦆
